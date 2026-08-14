@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-rna-navy-950 text-slate-100 font-sans antialiased min-h-screen selection:bg-rna-gold-500 selection:text-rna-navy-950;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0D1B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #20284D;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F8B03B;
+}
+
+/* Glassmorphism & Gold Effects based on Rian Nicolau Brand Manual */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #FEF5E7 0%, #F8B03B 50%, #F9C062 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(135deg, rgba(248, 176, 59, 0.6), rgba(248, 176, 59, 0.1)) 1;
+}
+
+.glass-panel {
+  background: rgba(22, 28, 54, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-gold {
+  background: rgba(22, 28, 54, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(248, 176, 59, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(10, 13, 27, 0.6);
+}
+
+.glass-input {
+  background: rgba(10, 13, 27, 0.8);
+  border: 1px solid rgba(32, 40, 77, 0.9);
+  transition: all 0.2s ease-in-out;
+}
+
+.glass-input:focus {
+  border-color: rgba(248, 176, 59, 0.9);
+  box-shadow: 0 0 14px rgba(248, 176, 59, 0.25);
+  outline: none;
+}
+
+.font-bebas {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.05em;
+}
